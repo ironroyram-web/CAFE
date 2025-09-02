@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Le Café</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -24,8 +25,17 @@
       font-size: 3em;
     }
 
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
     .buttons {
-      margin-top: 50px;
+      margin-top: 30px;
     }
 
     .buttons a {
@@ -45,11 +55,24 @@
     }
 
     footer {
-      margin-top: 100px;
+      margin-top: 80px;
       background-color: #eee;
       padding: 20px;
       font-size: 0.9em;
       color: #888;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .buttons a {
+        font-size: 1em;
+        padding: 12px 24px;
+        margin: 10px;
+      }
     }
   </style>
 </head>
@@ -60,11 +83,13 @@
     <p>Bienvenido a nuestro rincón de sabor</p>
   </header>
 
-  <div class="buttons">
-    <a href="Promocion.pdf" target="_blank">Promoción</a>
-    <a href="MenuComida.pdf" target="_blank">Menú 1</a>
-    <a href="MenuBebidas.pdf" target="_blank">Menú 2</a>
-  </div>
+  <main>
+    <section class="buttons">
+      <a href="./Promocion.pdf" target="_blank" aria-label="Ver archivo de promoción (PDF)">Promoción</a>
+      <a href="./MenuComida.pdf" target="_blank" aria-label="Ver menú de comida (PDF)">Menú 1</a>
+      <a href="./MenuBebidas.pdf" target="_blank" aria-label="Ver menú de bebidas (PDF)">Menú 2</a>
+    </section>
+  </main>
 
   <footer>
     © 2025 Le Café. Todos los derechos reservados.
